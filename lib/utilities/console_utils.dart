@@ -1,0 +1,13 @@
+import 'dart:convert';
+import 'dart:io'; // dart input/output
+
+class ConsoleUtils {
+  static String lerStringComTexto(String nome) {
+    print(nome);
+    return lerStringComTexto(nome);
+  }
+
+    static String lerStringConsole() {
+    return stdin.readLineSync(encoding: utf8) ?? ""; // retorna a leitura do input String do usuario
+  }
+}
