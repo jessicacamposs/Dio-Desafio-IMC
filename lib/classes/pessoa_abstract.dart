@@ -1,11 +1,13 @@
 import 'dart:ffi';
 
-// abstract class Pessoa
-abstract class Pessoa {
+// class Pessoa
+class Pessoa {
   String _nome = "";
-  double _peso = 0.0;
-  double _altura = 0.0;
+  List <double> _peso = [];
+  List <double> _altura = [];
 
+  Pessoa(this._nome); // construtor
+  
   void setNome(String nome) {
     _nome = nome;
   }
@@ -14,19 +16,25 @@ abstract class Pessoa {
     return _nome;
   }
 
-  void setPeso(double peso) {
-    _peso = peso;
-  }
-
-  double getPeso() {
+  List<double> getPeso() { 
     return _peso;
   }
 
-  void setAltura(double altura) {
-    _altura = altura;
+  List<double> getAltura() { 
+    return _altura;
   }
 
-  double getAltura() {
-    return _altura;
+  void addPeso(double peso) {
+    _peso.add(peso);
+  }
+
+  void addAltura(double altura) {
+    _altura.add(altura);
+  }
+
+// recebe o imc e retorna o seu valor
+  double imcResultado(){
+    var imc = _peso / (_altura*_altura);
+    return imc;
   }
 }
