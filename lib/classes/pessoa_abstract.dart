@@ -3,8 +3,8 @@ import 'dart:ffi';
 // class Pessoa
 class Pessoa {
   String _nome = "";
-  List <double> _peso = [];
-  List <double> _altura = [];
+  double _peso = 0.0;
+  double _altura = 0.0;
 
   Pessoa(this._nome); // construtor
   
@@ -16,23 +16,24 @@ class Pessoa {
     return _nome;
   }
 
-  List<double> getPeso() { 
+  void setPeso(double peso) {
+    _peso = peso;
+  }
+
+  double getPeso() { 
     return _peso;
   }
 
-  List<double> getAltura() { 
+  void setAltura(double altura) {
+    _altura = altura;
+  }
+
+  double getAltura() { 
     return _altura;
   }
 
-  void addPeso(double peso) {
-    _peso.add(peso);
-  }
-
-  void addAltura(double altura) {
-    _altura.add(altura);
-  }
-
 // recebe o imc e retorna o seu valor
+// fazer receber o input de peso e altura
   double imcResultado(){
     var imc = _peso / (_altura*_altura);
     return imc;
