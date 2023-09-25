@@ -60,5 +60,9 @@ void executar() {
     print("Ocorreu um erro: $ValorInvalidoException");
   }
 
-  print("O IMC DE ${pessoa.getNome()} E DE: ${pessoa.imcResultado()} E SUA CLASSIFICACAO E: ");
+  // transformar o input em double automaticamente
+  int casasDecimais = 2; // limite de quantas casas decimais deve mostrar
+  double imc = peso!/(altura!*altura!);
+
+  print("O IMC DE ${pessoa.getNome()} E DE: ${imc.toStringAsFixed(casasDecimais)} E SUA CLASSIFICACAO E: ");
 }

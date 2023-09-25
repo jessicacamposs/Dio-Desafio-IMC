@@ -33,11 +33,11 @@ class Pessoa {
   }
 
 // recebe o imc e retorna o seu valor
-// fazer receber o input de peso e altura
-  double imcResultado(){
+// fazer o valor recebido ser em decimal
+ /* double imcResultado(){
     double pesoFinal = _peso.first;
     double alturaFinal = _altura.first;
     double imc = pesoFinal / (alturaFinal*alturaFinal);
     return imc.isNaN ? 0 : imc;
-  }
+  }*/
 }
