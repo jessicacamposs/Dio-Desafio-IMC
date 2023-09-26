@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:imc/classes/classificacoes.dart';
 import 'package:imc/classes/pessoa.dart';
 import 'package:imc/exceptions/valor_invalido_exception.dart';
 import 'package:imc/exceptions/nome_invalido_exceptions.dart';
@@ -62,7 +63,7 @@ void executar() {
 
   // transformar o input em double automaticamente
   int casasDecimais = 2; // limite de quantas casas decimais deve mostrar
-  double imc = peso!/(altura!*altura!);
+  //double imc = peso!/(altura!*altura!);
 
-  print("O IMC DE ${pessoa.getNome()} E DE: ${imc.toStringAsFixed(casasDecimais)} E SUA CLASSIFICACAO E: ");
+  print("O IMC DE ${pessoa.getNome()} E DE: ${pessoa.imcResultado(peso!, altura!).toStringAsFixed(casasDecimais)} E SUA CLASSIFICACAO E: ${pessoa.chamarClassificacao(peso, altura)}");
 }

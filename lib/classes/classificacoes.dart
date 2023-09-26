@@ -1,17 +1,22 @@
-class classificacao {
-  /*static String magrezaGrave(){
-    print("Voce esta com magreza grave");
-    return magrezaGrave();
-  }*/
+/*import 'package:imc/classes/pessoa.dart';
+import 'package:imc/imc.dart';
 
-  void chamarClassificacao() {
-    String resultadoClassificacao = "";
+class Classificacao {
+  var resultadoClassificacao;
 
-    switch (resultadoClassificacao) {
-      case 16:
-        print("MAGREZA SEVERA");
-        break;
-      default:
+static double chamarClassificacao () {
+  double ? peso;
+  double ? altura;
+  double imc = peso!/(altura!*altura!);
+  double magrezaSevera;
+
+  switch (resultadoClassificacao) {
+    case (magrezaSevera):
+    if (imc <= 16) {
+      print("Magreza Severa");
     }
-  }
-}
+      break;
+    default:
+  } return chamarClassificacao();
+}  
+}*/
