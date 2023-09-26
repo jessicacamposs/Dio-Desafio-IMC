@@ -1,6 +1,4 @@
 import 'dart:io';
-
-import 'package:imc/classes/classificacoes.dart';
 import 'package:imc/classes/pessoa.dart';
 import 'package:imc/exceptions/valor_invalido_exception.dart';
 import 'package:imc/exceptions/nome_invalido_exceptions.dart';
@@ -44,7 +42,7 @@ void executar() {
     print("Ocorreu um erro: $ValorInvalidoException");
   }
 
-  print("INFORME SUA ALTURA: ");
+  print("INFORME SUA ALTURA EM DECIMAIS: ");
   String alturaTexto = ConsoleUtils.lerStringConsole();
 
   try {
